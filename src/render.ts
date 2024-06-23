@@ -23,9 +23,13 @@ async function main() {
         composition,
         serveUrl: bundleLocation,
         inputProps: {
-            size: 'small'
+            size: 'big', // <- does not take effect
+            titleText: "Welcome to Remotion",
+            titleColor: "#000000",
+            logoColor1: "#91EAE4",
+            logoColor2: "#86A8E7",
         },
-        scale: 3 / 2,
+        scale: 1,
         logLevel: "verbose",
         imageFormat: "jpeg",
         jpegQuality: 100,
