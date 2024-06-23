@@ -22,6 +22,7 @@
   },
   "scripts": {
     "start": "remotion studio",
+    "render": "ts-node src/render.ts",
     "build": "remotion render HelloWorld out/video.mp4",
     "upgrade": "remotion upgrade",
     "test": "eslint src --ext ts,tsx,js,jsx && tsc"

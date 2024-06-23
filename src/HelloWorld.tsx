@@ -13,6 +13,7 @@ import { z } from "zod";
 import { zColor } from "@remotion/zod-types";
 
 export const myCompSchema = z.object({
+  size: z.enum(["small", "big"]),
   titleText: z.string(),
   titleColor: zColor(),
   logoColor1: zColor(),

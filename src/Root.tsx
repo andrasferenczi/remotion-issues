@@ -12,14 +12,38 @@ export const RemotionRoot: React.FC = () => {
         // npx remotion render src/index.ts <id> out/video.mp4
         id="HelloWorld"
         component={HelloWorld}
+        calculateMetadata={async (options) => {
+            console.log(`CALCULATE METADATA, ${JSON.stringify(options.props, null,2)}`)
+
+            if(options.props.size === 'big') {
+                return {
+                    width: 1920,
+                    height: 1280
+                }
+            }
+
+            if(options.props.size === 'small') {
+                return {
+                    width: 1366,
+                    height: 768
+                }
+            }
+
+            return {
+            //     No override
+                width: 720,
+                height: 560
+            }
+        }}
         durationInFrames={150}
         fps={30}
-        width={1920}
-        height={1080}
+        width={1280}
+        height={720}
         // You can override these props for each render:
         // https://www.remotion.dev/docs/parametrized-rendering
         schema={myCompSchema}
         defaultProps={{
+          size: 'small',
           titleText: "Welcome to Remotion",
           titleColor: "#000000",
           logoColor1: "#91EAE4",
