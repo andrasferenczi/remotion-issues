@@ -18,7 +18,7 @@ export const RemotionRoot: React.FC = () => {
             if(options.props.size === 'big') {
                 return {
                     width: 1920,
-                    height: 1280
+                    height: 1080
                 }
             }
 
