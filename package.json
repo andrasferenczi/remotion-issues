@@ -23,6 +23,7 @@
   "scripts": {
     "start": "remotion studio",
     "render": "ts-node src/render.ts",
+    "render-cli": "remotion render HelloWorld --props '{\"size\": \"big\"}' --sequence --frames=1 --log=verbose",
     "build": "remotion render HelloWorld out/video.mp4",
     "upgrade": "remotion upgrade",
     "test": "eslint src --ext ts,tsx,js,jsx && tsc"
